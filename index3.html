@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="wrapper">
+          <h1>PASSWORD GENERATOR</h1>
+          <div class="pass-gen">
+          <input type="text" readonly placeholder="Password" class="passwordDisplay" >
+          <span class="copytext"></span>
+          <i class="fa-regular fa-copy fa-l" cpybtn id="copybtn"></i>
+        </div>
+        <div class="input-container">
+            
+            <div class="len-container">
+                <p>Password Length</p>
+                <p class="displayLength">0</p>
+            </div>
+            <input type="range" min="0" max="20" step="1" style="color:blue;" class="displayrange" >
+            <div>
+                <input type="checkbox" hasuppercase onclick="checkcount()">
+                <label for="uppercase">Includes Uppercase of Letters</label>
+                
+            </div>
+            <div>
+                <input type="checkbox" haslowercase onclick="checkcount()">
+                <label for="lowercase">Includes Lowercase of Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" hasnum  onclick="checkcount()">
+                <label for="number">Includes Numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" hassymbol  onclick="checkcount()">
+                <label for="symbols">Includes Symbols</label>
+            </div>
+            <div class="calc-strength">
+                <span>Strength</span>
+                <span class="displayStrength"></span>
+            </div>
+            <button getpassword onclick="generatePassword()" class="passwordx">Generate Password</button>
+        </div>
+        </div>
+        <script src="script3.js"></script>
+        
+</body>
+</html>
